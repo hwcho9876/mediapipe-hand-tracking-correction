@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediapipe-hand-tracking-correction"
+version = "0.1.0"
+description = "RGB hand tracking stability experiments with independent One Euro and EMA recovery"
+requires-python = ">=3.10,<3.14"
+dependencies = ["numpy>=1.26,<3", "mediapipe==1.1.1", "opencv-python>=4.11,<5", "Pillow>=10,<13"]
+
+[project.scripts]
+handlab = "handlab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["handlab*"]
